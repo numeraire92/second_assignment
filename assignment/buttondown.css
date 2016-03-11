@@ -38,6 +38,8 @@ div#mainbody{
 	width: 800px;
 	margin-left: auto ;
 	margin-right: auto ;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 div#header, header
