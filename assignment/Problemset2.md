@@ -30,7 +30,7 @@ As for the 4th company, the profit, the first order condition and the
 best response function are:
 $$\pi_4 = \left[ 100 - (q_4 + q_{-4}) \right] q_4 - (20+\varphi) q_4$$
 $$ 
-    \frac{\partial \pi_4}{\partial q_4} = 80 - 2 q_4 - q_{-4}-\varphi = 0; ~~~\Rightarrow~~~ q_4=40-\frac{q_{-4}+\varphi}{2}$$ {#eq: q4st1}
+    \frac{\partial \pi_4}{\partial q_4} = 80 - 2 q_4 - q_{-4}-\varphi = 0; ~~~\Rightarrow~~~ q_4=40-\frac{q_{-4}+\varphi}{2}$$ {#eq:q4st1}
 In Nash-equilibrium every company produces the best response quantity
 given the other companies’ output, thus denoting with
 $q_1^*$,$q_2^*$,$q_3^*$ and $q_4^*$ the produced quantities in
