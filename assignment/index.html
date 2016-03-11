@@ -1,0 +1,252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Cleave, Blair u1275847 Gonzalez, Carlos u1272568 Nguyen Huy, Tung u1273269 Wipusanawan, Chayanin u1272560" />
+  <title>Methods: Game Theory I – Problem set 2</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="buttondown.css" type="text/css" />
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div id="mainbody">
+<div id="header">
+<h1 class="title">Methods: Game Theory I – Problem set 2</h1>
+<h2 class="author"><p>Cleave, Blair u1275847<br />
+Gonzalez, Carlos u1272568<br />
+Nguyen Huy, Tung u1273269<br />
+Wipusanawan, Chayanin u1272560</p></h2>
+</div>
+<h1 id="problem-1." class="unnumbered">Problem 1.</h1>
+<h2 id="solution" class="unnumbered">Solution</h2>
+<h4 id="a" class="unnumbered">a)</h4>
+<p>Let <span class="math inline">\(\pi_i\)</span> denote the profit (payoff) of company <span class="math inline">\(i\)</span> given its produced quantity (<span class="math inline">\(q_i\)</span>) and the total quantity produced by the rest of the companies <span class="math inline">\(q_{-i}\)</span>. Using these notations, the profit of company <span class="math inline">\(i \in {1, 2, 3}\)</span>: <span class="math display">\[\pi_i = \left[ 100 - (q_i + q_{-i}) \right] q_i - 20 q_i\]</span> The first order condition (since the coefficient of the quadratic term is negative, this will provide the profit maximizing quantity) and the best response of company <span class="math inline">\(i \in {1,2,3}\)</span> given other companies’ output are: <a name="eq:q123st1"></a><span class="math display">\[\
+    \frac{\partial \pi_i}{\partial q_i} = 80 - 2 q_i - q_{-i} = 0; ~~~\Rightarrow~~~ q_i=40-\frac{q_{-i}}{2}\qquad (1)\]</span> As for the 4th company, the profit, the first order condition and the best response function are: <span class="math display">\[\pi_4 = \left[ 100 - (q_4 + q_{-4}) \right] q_4 - (20+\varphi) q_4\]</span> <span class="math display">\[ 
+    \frac{\partial \pi_4}{\partial q_4} = 80 - 2 q_4 - q_{-4}-\varphi = 0; ~~~\Rightarrow~~~ q_4=40-\frac{q_{-4}+\varphi}{2}\]</span> {#eq: q4st1} In Nash-equilibrium every company produces the best response quantity given the other companies’ output, thus denoting with <span class="math inline">\(q_1^*\)</span>,<span class="math inline">\(q_2^*\)</span>,<span class="math inline">\(q_3^*\)</span> and <span class="math inline">\(q_4^*\)</span> the produced quantities in equilibrium by a given company, substituting company 1’s best response to company 2’s best response in equilibrium and then rearranging the equation gives us: <a name="eq:q2st2"></a><span class="math display">\[
+    q_2^* = 40 - \frac{\left( 40 - \frac{q_2^*+q_3^*+q_4^*}{2} \right)+q_3^*+q_4^*}{2} ~~~\Rightarrow~~~ q_2^*=\frac{80-q_3^*-q_4^*}{3}\qquad (2)\]</span> Plugging this into company 1’s best response in equlibrium, we’ll get: <a name="eq:q1st2"></a><span class="math display">\[
+    q_1^* = 40 - \frac{\left( \frac{80-q_3^*-q_4^*}{3} \right)+q_3^*+q_4^*}{2} ~~~\Rightarrow~~~ q_1^*=\frac{80-q_3^*-q_4^*}{3}\qquad (3)\]</span> Substituting these two formulas in the best reponse of company 3 in equilibrium and rearranging the equation, we get: <a name="eq:q3st3"></a><span class="math display">\[
+    q_3^*=40-\frac{\left( \frac{80-q_3^*-q_4^*}{3} \right)+\left( \frac{80-q_3^*-q_4^*}{3} \right) + q_4^*}{2} ~~~\Rightarrow~~~ q_3^*=20-\frac{q_4^*}{4}\qquad (4)\]</span> Again, plugging this back to (<a href="#eq:q2st2">2</a>) and (<a href="#eq:q1st2">3</a>), we get: <a name="eq:q12st3"></a><span class="math display">\[  q_2^* = q_1^*=20-\frac{q_4^*}{4}\qquad (5)\]</span> And finally, substituting all these in company 4’s best response in equlibrium, we get: <span class="math display">\[\widehat{q_4^*}=40-\frac{3 \cdot \left( 20-\frac{q_4^*}{2} \right)+\varphi}{2} ~~~\Rightarrow~~~ \widehat{q_4^*} = 16-\frac{4}{5} \varphi\]</span> Thus in equlibrium: <span class="math display">\[q_4^* =
+    \begin{cases}
+        16-\frac45 \varphi &amp; \text{if} ~ \varphi \leq 20 \\
+        0 &amp; \text{if} ~ \varphi &gt; 20
+    \end{cases}\]</span> <span class="math display">\[q_1^* = q_2^* = q_3^* =
+    \begin{cases}
+        16+\frac15 \varphi &amp; \text{if} ~ \varphi \leq 20 \\
+        20 &amp; \text{if} ~ \varphi &gt; 20
+    \end{cases}\]</span> <span class="math display">\[P^* = (100-Q^*)=
+    \begin{cases}
+        36-\frac15 \varphi &amp; \text{if} ~ \varphi \leq 20 \\
+        40 &amp; \text{if} ~ \varphi &gt; 20
+    \end{cases}
+    ~~~\]</span> <span class="math display">\[\pi_1^*=\pi_2^*=\pi_3^* =
+    \begin{cases}
+        \left( 16+\frac{\varphi}{5} \right)^2 &amp; \text{if} ~ \varphi \leq 20 \\
+        400 &amp; \text{if} ~ \varphi &gt; 20
+    \end{cases}\]</span> <a name="eq:pi4a"></a><span class="math display">\[
+    \pi_4^*=
+    \begin{cases}
+        \left( 16-\frac{4}{5}\varphi \right)^2 &amp; \text{if} ~ \varphi \leq 20 \\
+        0 &amp; \text{if} ~ \varphi &gt; 20
+    \end{cases}\qquad (6)\]</span></p>
+<h4 id="b" class="unnumbered">b)</h4>
+<p>Since the 2 merging company have the same constant marginal costs and neither have fixed costs, given a total output of the merged company (<span class="math inline">\(q_{12}\)</span>) it does not matter how they split up the production of that output. Thus marginal costs will be inherited and we can handle the remaining market just like if we have 2 companies with <span class="math inline">\(MC=20\)</span> and one company with <span class="math inline">\(MC=(20+\varphi)\)</span>. Thus we can still use the best response function formulated in <a href="#eq:q123st1">1</a> and ({<span class="citation">@eq:q4st1</span>}). Again, in equilibrium every company produces the best response quantity given the other companies’ output, thus: <span class="math display">\[q_{12}^* = 40 - \frac{q_3^*+q_4^*}{2} ~~;~~ q_{3}^* = 40 - \frac{q_{12}^*+q_4^*}{2} ~~;~~ q_{4}^* = 40 - \frac{q_{12}^*+q_3^*+\varphi}{2}\]</span> Plugging <span class="math inline">\(q_{12}^*\)</span> to <span class="math inline">\(q_3^*\)</span> and rearranging it to <span class="math inline">\(q_3^*\)</span>, and finally substituting this one back in <span class="math inline">\(q_{12}^*\)</span>, we get: <a name="eq:q123-p2_s3"></a><span class="math display">\[ q_3^*=q_{12}^*=\frac{80-q_4^*}{3}\qquad (7)\]</span> Substituting these to <span class="math inline">\(q_4^*\)</span> and than substituting this one back in (<a href="#eq:q123-p2_s3">7</a>), we get: <span class="math display">\[q_4^*=
+    \begin{cases}
+        20-\frac34\varphi &amp; \text{if}~\frac{80}{3}\geq \varphi \\
+        0 &amp; \text{if}~\frac{80}{3}&lt;\varphi
+    \end{cases}
+    ~~~~
+    q_{12}^*=q_3^*=
+    \begin{cases}
+        \frac{\varphi+80}{4} &amp; \text{if}~\frac{80}{3}\geq \varphi \\
+        \frac{80}{3} &amp; \text{if}~\frac{80}{3}&lt;\varphi
+    \end{cases}\]</span> Thus: <span class="math display">\[P^*= (100-Q^*) =
+    \begin{cases}
+        40+\frac14 \varphi &amp; \text{if}~\frac{80}{3}\geq \varphi \\
+        \frac{140}3 &amp; \text{if}~\frac{80}{3}&lt;\varphi
+    \end{cases}\]</span> <span class="math display">\[\pi_{12}^*=\pi_3^*=
+    \begin{cases}
+        \left( 20+\frac14\varphi \right) \left( \frac{\varphi+80}{4} \right) = \left( \frac{\varphi+80}{4}\right)^2&amp; \text{if}~\frac{80}{3}\geq \varphi \\
+        \frac{80}3 \cdot \frac{80}3 &amp; \text{if}~\frac{80}{3}&lt;\varphi
+    \end{cases}\]</span> <a name="eq:pi4qb"></a><span class="math display">\[
+    \pi_{4}^*=
+    \begin{cases}
+        \left( 20+\frac14\varphi \right) \left( 20-\frac34 \varphi \right) &amp; \text{if}~\frac{80}{3}\geq \varphi \\
+        0 &amp; \text{if}~\frac{80}{3}&lt;\varphi
+    \end{cases}\qquad (8)\]</span></p>
+<h4 id="c" class="unnumbered">c)</h4>
+<p>If <span class="math inline">\(\varphi &gt; 0\)</span>, then since company 4 has higher constant marginal costs than company 1, in order to maximize profit (minimize cost) the merged company should shift all production to company 1. Thus, in this case we’ll have 3 symmetrical companies on the market. Using the formula from Problem set 1 - Problem 6, we get (<span class="math inline">\(i \in {2,3,&#39;14&#39;}\)</span>): <span class="math display">\[q_i^* = \frac{100-20}{3+1}=20  \pi_i^* = \left( 20 \right)^2 = 400\]</span> Whether it is profitable in this case for company 4 to merge with company 1 depends on the relation between the half of this profit (200) - since company 1 and 4 splits the total profit halfway - and company 4’s profit from part a) (formula in (<a href="#eq:pi4a">6</a>)). If <span class="math inline">\(\varphi &gt; 20\)</span>, the since <span class="math inline">\(200&gt;0\)</span>, merging is profitable for company 4. If <span class="math inline">\(\varphi \leq 20\)</span>, then it depends on the relation below: <span class="math display">\[200&gt;\left( 16-\frac{4}{5}\varphi \right)^2 ~~\Leftrightarrow~~ \frac{5}{2}(8-5\cdot\sqrt{2}) \approx 2.32 &lt; \varphi &lt;\frac{5}{2}(8+5\cdot\sqrt{2}) \approx 37.67\]</span> So only if <span class="math inline">\(\varphi &gt; 2.32\)</span>, then for company 4 it is profitable to merge with company 1.</p>
+<p>On the other hand, if <span class="math inline">\(\varphi &lt; 0\)</span>, then since in order to maximize profit, the all the output of the merged company should be produced by company 4. In this case, the market will basically have the same structure as describe in part b), but company 4 will get only half the payoff indicated above ({<span class="citation">@pi4qb</span>}) - again, since company 1 and 4 splits the profit. In this case, since <span class="math inline">\(\varphi &lt; 0\)</span>, the profit of company 4 (<span class="math inline">\(\pi_4^*&gt;0\)</span>) will always be higher without merging than in case of merging (<span class="math inline">\(0\)</span>).</p>
+<h1 id="problem-3." class="unnumbered">Problem 3.</h1>
+<p>Find all pure and mixed-strategy Nash equilibria of the following game!</p>
+<table>
+<tr>
+<th>
+</th>
+<th>
+</th>
+<th colspan="3">
+<b>Player 2</b>
+</th>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+</td>
+<td>
+L
+</td>
+<td>
+M
+</td>
+<td>
+R
+</td>
+</tr>
+<tr>
+<td rowspan="2">
+Player 1
+</td>
+<td>
+T
+</td>
+<td>
+2,2
+</td>
+<td>
+0,3
+</td>
+<td>
+1,3
+</td>
+</tr>
+<tr>
+<td>
+N
+</td>
+<td>
+3,2
+</td>
+<td>
+1,1
+</td>
+<td>
+0,1
+</td>
+</tr>
+</table>
+<h2 id="solution-1" class="unnumbered">Solution</h2>
+<p>First of all, we find the pure strategy Nash equilibria using the best responses correspondences. Let <span class="math inline">\(b_1(s_2)\)</span> be the best response function for Player 1 given the strategy of Player 2 vice versa. We can determine the following best responses for both players immediately from the payoff matrix. There are two pure-strategy Nash equilibria in this game: <span class="math inline">\((B,L)\)</span> and <span class="math inline">\((T,R)\)</span>.</p>
+<p><span class="math display">\[\begin{aligned}
+b_1(L) &amp;= \{B\} \\ 
+b_1(M) &amp;= \{B\} \\
+b_1(R) &amp;= \{T\} \\
+b_2(T) &amp;= \{M,R\} \\
+b_2(B) &amp;= \{L,R\} \end{aligned}\]</span></p>
+<p>Now we look for a mixed-strategy Nash equilibrium. A strategy profile <span class="math inline">\(\sigma = (\sigma_1, \sigma_2)\)</span> is a Nash equilibrium if and only if <span class="math inline">\(u_i(s_i,\sigma_{-i}) = u_i(s&#39;_i \sigma_{-i})\)</span> for all <span class="math inline">\(s_i, s&#39;_i \in S^+_i\)</span>. Let <span class="math inline">\(\sigma_{is}\)</span> represents the probability that Player <span class="math inline">\(i = 1,2\)</span> assigns to their pure strategy <span class="math inline">\(s_i\)</span>. As <span class="math inline">\(\Sigma \sigma_i = 1\)</span>, we can define the strategy of Player 1 as <span class="math inline">\((\sigma_{1T},1-\sigma_{1T}\)</span> and Player 2 as <span class="math inline">\(\sigma_{2L}, \sigma_{2M}, 1-\sigma_{2L}-\sigma_{2M})\)</span>. We establish the expected payoff for each pure strategy of Player 1 as folow.</p>
+<p><span class="math display">\[\begin{aligned}
+u_1 (T, \sigma_{2L}, \sigma_{2M}) &amp;= 2\cdot(\sigma_{2L}) + 0\cdot(\sigma_{2M}) + 1\cdot(1-\sigma_{2L}-\sigma_{2M}) \\
+&amp;= \sigma_{2L} - \sigma_{2M} + 1 \\
+u_1 (B, \sigma_{2L}, \sigma_{2M}) &amp;= 3\cdot(\sigma_{2L}) + 1\cdot(\sigma_{2M}) + 0\cdot(1-\sigma_{2L}-\sigma_{2M}) \\
+&amp;= 3\cdot\sigma_{2L} + \sigma_{2M}\end{aligned}\]</span></p>
+<p>We can compute the best response function for Player 1, given the expected payoff of each of their pure strategies.</p>
+<p><span class="math display">\[\begin{aligned}
+u_1(T, \sigma_{2L}, \sigma_{2M}) &amp;\lesseqgtr u_1(B, \sigma_{2L}, \sigma_{2M}) \\
+\sigma_{2L} - \sigma_{2M} + 1  &amp;\lesseqgtr 3\cdot\sigma_{2L} + \sigma_{2M} \\
+1 - 2 \cdot \sigma_{2L} &amp;\lesseqgtr 2 \cdot \sigma_{2M}\end{aligned}\]</span></p>
+<p>As <span class="math inline">\(\sigma_{2R} = 1 - \sigma_{2L} - \sigma_{2M}\)</span>, we can rearrange the relation in terms of <span class="math inline">\(\sigma_{2R}\)</span>. Also, for <span class="math inline">\(\sigma_{2R} = \sigma_{2L} + \sigma_{2M}\)</span> to be true given <span class="math inline">\(\sigma_{2L} + \sigma_{2M} + \sigma_{2R} =1\)</span>, we can derive that <span class="math inline">\(\sigma_{2R} = 1/2\)</span>. Finally, we arrive at the best response function of Player 1 in term of <span class="math inline">\(\sigma_{2R}\)</span>.</p>
+<p><span class="math display">\[\begin{aligned}
+\sigma_{2R} &amp;\lesseqgtr \sigma_{2L} + \sigma_{2M}\end{aligned}\]</span></p>
+<p><span class="math display">\[b_1(\sigma_{2R}) =
+\left \{
+  \begin{array}{ccc}
+  0 &amp; $if$ &amp; \sigma_{2R} &lt; 1/2 \\
+  {[0.1]} &amp; $if$ &amp; \sigma_{2R} = 1/2 \\
+  1 &amp; $if$ &amp; \sigma_{2R} &gt; 1/2
+  \end{array}
+\right.\]</span></p>
+<p>We similarly derive expected payoff for each of Player 2’s pure strategies.</p>
+<p><span class="math display">\[\begin{aligned}
+u_2 (L, \sigma_{1T}) &amp;= 2\cdot(\sigma_{1T}) + 2\cdot(1-\sigma_{1T}) \\
+&amp;= 2 \\
+u_2 (M, \sigma_{1T}) &amp;= 3\cdot(\sigma_{1T}) + 1\cdot(1-\sigma_{1T}) \\
+&amp;= 2\cdot\sigma_{1T} + 1 \\
+u_2 (R, \sigma_{1T}) &amp;= 3\cdot\sigma_{1T} + 2\cdot(1-\sigma_{1T}) \\
+&amp;= \sigma_{1T} + 2\end{aligned}\]</span></p>
+<p>When we consider the condition that Player 2 will assign positive probability for all three pure strategies (<span class="math inline">\(\sigma_{2L}, \sigma_{2M}\)</span>, and <span class="math inline">\(\sigma_{2R} &gt; 0\)</span>), such strategy can be part of a mixed-strategy Nash equilibrium if and only if <span class="math inline">\(u_2(L, \sigma_{1T}) = u_2(M, \sigma_{1T}) = u_2(R, \sigma_{1T})\)</span>. There is no such <span class="math inline">\(\sigma_{1T} \in {[0,1]}\)</span> that satisfy this condition. Therefore, there is no Nash equilibrium in which Player 2 assign positive probability to all three pure strategies.</p>
+<p>Then, we consider the cases where Player 2 assign positive probability to only two of their pure strategies. Player 2 may mix:</p>
+<ul>
+<li><p>pure strategies L and M only if <span class="math inline">\(2 = 2 \cdot \sigma_{1T} + 1 \geq \sigma_{1T} + 2\)</span>. There is no such <span class="math inline">\(\sigma_{1T}\)</span> that satisfies the conditions. Therefore, a mix strategy <span class="math inline">\((\sigma_{2L}, \sigma_{2M}, 0)\)</span> for <span class="math inline">\(\sigma_{2L}, \sigma_{2M} \in {[0,1]}\)</span> does not belong to Player 2’s best response function.</p></li>
+<li><p>pure strategies L and R only if <span class="math inline">\(2 = \sigma_{1T} + 2 \geq 2 \cdot \sigma_{1T} + 1\)</span>. In this case, <span class="math inline">\(\sigma_{1T} = 0\)</span> satisfies the condition. Therefore, <span class="math inline">\((\sigma_{2L}, 0, \sigma_{2R})\)</span> for <span class="math inline">\(\sigma_{2L}, \sigma_{2R} \in {[0,1]}\)</span> is a best response for <span class="math inline">\(\sigma_{1T} = 0\)</span>.</p></li>
+<li><p>pure strategies M and R only if <span class="math inline">\(2 \cdot \sigma_{1T} + 1 = \sigma_{1T} + 2 \geq 2.\)</span> In this case, <span class="math inline">\(\sigma_{1T} = 1\)</span> satisfies the condition. Therefore, <span class="math inline">\((0, \sigma_{2M}, \sigma_{2R})\)</span> for <span class="math inline">\(\sigma_{2M}, \sigma_{2R} \in {[0,1]}\)</span> is a best response for <span class="math inline">\(\sigma_{1T} = 1\)</span>.</p></li>
+</ul>
+<p>From the best response functions of the two players, we look for the correspondence, and find the mixed-strategy Nash equilibria as the following continua:</p>
+<ul>
+<li><p><span class="math inline">\(\{(\sigma_{1T}, \sigma_{1B}), \sigma_{2L}, \sigma_{2M}, \sigma_{2R}) | (\sigma_{1T} = 0, \sigma_{2M} = 0, \sigma_{2R} \leq 1/2\}\)</span> and</p></li>
+<li><p><span class="math inline">\(\{(\sigma_{1T}, \sigma_{1B}), \sigma_{2L}, \sigma_{2M}, \sigma_{2R}) | \sigma_{1T} = 1, \sigma_{2L}=0, \sigma_{2R} \geq 1/2\}\)</span></p></li>
+</ul>
+<h1 id="problem-4." class="unnumbered">Problem 4.</h1>
+<h2 id="solution-2" class="unnumbered">Solution</h2>
+<h4 id="a-1" class="unnumbered">a)</h4>
+<p>Using backward induction, we first find the optimal actions in the “last” subgame, i.e. the actions of firms 2 and 3. The profit functions for Firms 2 and 3, respectively, are as follows:</p>
+<p><span class="math display">\[\begin{aligned}
+    \pi_2 &amp;= P \cdot q_2 - c \cdot q_2 \\
+    &amp;= (a - q_1 - q_2 - q_3) \cdot q_2 - c \cdot q_2 \\
+    \pi_3 &amp;= P \cdot q_3 - c \cdot q_3 \\
+    &amp;= (a - q_1 - q_2 - q_3) \cdot q_3 - c \cdot q_3 \\\end{aligned}\]</span></p>
+<p>We find the profit-maximising quantities <span class="math inline">\(q_i*\)</span> for <span class="math inline">\(i=2,3\)</span> at <span class="math inline">\(\frac{\partial \pi_i}{\partial q_i} = 0\)</span>. Given that firms 2 and 3 move simultaneously, the analysis is similar to a static game, with <span class="math inline">\(q_1\)</span> as given. <a name="eq:br4a"></a><span class="math display">\[\begin{aligned}
+    \frac{\partial \pi_2}{\partial q_2} &amp;= a - q_1 - q_2 - 2q_3 - c_2 = 0 \\
+    q_2* &amp;= \frac{1}{2} (a - q_1 - q_3 - c_2)  \\
+    \frac{\partial \pi_3}{\partial q_3} &amp;= a - q_1 - q_2 - 2q_3 - c_3 = 0 \\
+    q_3* &amp;= \frac{1}{2} (a- q_1 - q_2 -c_3)  \end{aligned}\qquad (9)\]</span> We solve the system of two-variable equations in <a href="#eq:br4a">9</a>. <a name="eq:br4a_2"></a><span class="math display">\[\begin{aligned}
+    q_3* &amp;= \frac{1}{2} (a - q_1 - (\frac{1}{2} (a - q_1 - q_3 - c_2) - c_3) \\
+    &amp;= \frac{1}{3} (a - q_1 + c_2 - 2c_3) \\
+    q_2* &amp;= \frac{1}{2} (a - q_1 - \frac{1}{3} (a - q_1 + c_2 - 2c_3) - c_2) \\
+    &amp;= \frac{1}{3} (a = q_1 - 2c_2 + c_3)\end{aligned}\qquad (10)\]</span></p>
+<p>Now we have the optimal actions for firms 2 and 3 given the action of firm 1 in the earlier stage of the game. Then, we can consider the longer subgame, that is from the start in which firm 1 moves. Given the optimal actions of firms 2 and 3 from (<a href="#eq:br4a_2">10</a>), we can establish the payoffs for firm 1.</p>
+<p><span class="math display">\[\begin{aligned}
+    \pi_1 &amp;= P \cdot q_1 - c \cdot q_1 \\
+    &amp;= (a - q_1 - q_2 - q_3) \cdot q_1 - c \cdot q_1 \\
+    &amp;= (a - q_1 - \frac{1}{3} (a = q_1 - 2c_2 + c_3) - \frac{1}{3} (a - q_1 + c_2 - 2c_3)) \cdot q_1 - c \cdot q_1 \\
+    &amp;= \frac{1}{3}(a - q_1 + c_2 + c_3) \cdot q_1 - c_1 q_1\end{aligned}\]</span></p>
+<p>Again, we find the profit-maximising quantity <span class="math inline">\(q_1*\)</span> at <span class="math inline">\(\frac{\partial \pi_i}{\partial q_i} = 0\)</span>, <a name="eq:br4a5"></a><span class="math display">\[\begin{aligned}
+    \frac{\partial \pi_2}{\partial q_2} &amp;= \frac{1}{3}(a - 2q_1 + c_2 + c_3) - c_1 = 0 \\
+    q_1* &amp;= \frac{1}{2} (a - 3c_1 + c_2 + c_3)\end{aligned}\qquad (11)\]</span> Plugging this back to (<a href="#eq:br4a_2">10</a>). <a name="eq:br4a67"></a><span class="math display">\[\begin{aligned}
+    q_2* &amp;= \frac{1}{3} (a - \frac{1}{2} (a - 3c_1 + c_2 + c_3) - 2c_2 + c_3) \\
+    &amp;= \frac{1}{6} (a + 3c_1 - 5c_2 + c_3) \\
+    q_3* &amp;= \frac{1}{3} (a -\frac{1}{2} (a - 3c_1 + c_2 + c_3) + c_2 - 2c_3) \\
+    &amp;= \frac{1}{6} (a + 3c_1 + c_2 - 5c_3) \\\end{aligned}\qquad (12)\]</span> From (<a href="#eq:br4a5">11</a>), and (<a href="#eq:br4a67">12</a>), we can determine the total quantity <span class="math inline">\(Q = q_1 + q_2 + q_3\)</span> and the price <span class="math inline">\(P = a - Q\)</span>. <span class="math display">\[\begin{aligned}
+    Q &amp;= \frac{1}{2} (a - 3c_1 + c_2 + c_3) + \frac{1}{6} (a + 3c_1 - 5c_2 + c_3) + \frac{1}{6} (a + 3c_1 + c_2 - 5c_3) \\
+    &amp;= \frac{1}{6} (5a - 3c_1 - c_2 - c_3) \\
+    P(Q) &amp;= a - \frac{1}{6} (5a - 3c_1 - c_2 - c_3) \\
+    &amp;= \frac{1}{6} (a + 3c_1 + c_2 + c_3)\end{aligned}\]</span> The profit for each firm at the subgame-perfect Nash equilibrium is as follows. <span class="math display">\[\begin{aligned}
+    \pi_1 &amp;= \frac{1}{6} (a + 3c_1 + c_2 + c_3) \cdot \frac{1}{2} (a - 3c_1 + c_2 + c_3) - c_1 \cdot \frac{1}{2} (a - 3c_1 + c_2 + c_3) \\
+    &amp;= \frac{1}{12}(a - 3c_1 + c_2 + c_3)^2\\
+    \pi_2 &amp;= \frac{1}{6} (a + 3c_1 + c_2 + c_3) \cdot \frac{1}{6} (a + 3c_1 - 5c_2 + c_3) - c_2 \cdot \frac{1}{6} (a + 3c_1 - 5c_2 + c_3) \\
+    &amp;= \frac{1}{36} (a + 3c_1 - 5c_2 + c_3)^2 \\
+    \pi_3 &amp;= \frac{1}{6} (a + 3c_1 + c_2 + c_3) \cdot \frac{1}{6} (a + 3c_1 + c_2 - 5c_3) - c_3 \cdot \frac{1}{6} (a + 3c_1 + c_2 - 5c_3) \\
+    &amp;= \frac{1}{36} (a + 3c_1 + c_2 - 5c_3)^2 \\\end{aligned}\]</span> The total social welfare is the sum of consumer surplus (<span class="math inline">\(CS = (Q^*)^2/2\)</span>) and the producer profits. Thus: <span class="math display">\[TW_a = \frac{(Q^*)^2}{2} + \sum\limits_{i=3}^3 \pi^*_i = \frac{25}{72} (a-c)^2+\frac{1}{12} (a-c)^2+\frac{1}{36} (a-c)^2+\frac{1}{36} (a-c)^2 = \frac{35}{72} (a-c)^2\]</span></p>
+<h4 id="b-1" class="unnumbered">b)</h4>
+<p>Since in the initial stage of the game company 1 and 2 choose quantity simulteanously and in the next stage in knowledge of those choice company 3 chooses its own, we first start to analyze the subgame at the end of the: the choice of company 3. Assuming <span class="math inline">\(q_1\)</span> and <span class="math inline">\(q_2\)</span> to be the chosen quantities of the leading companies, the best response of company 3 is (given that all companies are rational and that rationality of companies are common knowledge): <a name="eq:co3profitb"></a><span class="math display">\[
+    \pi_3 = [a - (q_3 + q_{-3})] q_3 - c_3 q_3 ~~ \Rightarrow ~~ \frac{\partial \pi_3}{\partial q_3} = a-2q_3-q_{-3}-c_3=0\qquad (13)\]</span> <a name="eq:q3bst1"></a><span class="math display">\[
+    q_3(q_1,q_2) = \frac{a-c_3-q_1-q_2}{2}\qquad (14)\]</span> This is the strategy of company 3 in the equilibrium of this subgame. In the first stage, since all companies are rational and that is common knowledge, although company 1 and 2 has no information about previous moves, they can assume rationally that company 3 will have according to (<a href="#eq:q3bst1">14</a>). Thus their best response functions (<span class="math inline">\(i \in {1,2}\)</span>): <span class="math display">\[\pi_i = [a-(q_1+q_2+\frac{a-c_3-q_1-q_2}{2})]*q_i-c_i*q_i ~~ \Rightarrow ~~ \frac{\partial \pi_i}{\partial q_i} = 0\]</span> <a name="eq:q1q2bst2"></a><span class="math display">\[
+    q_1(q_2) = \frac{a-2c_1+c_3-q_2}{2} ~~~~ q_2(q_1) = \frac{a-2c_2+c_3-q_1}{2}\qquad (15)\]</span> Since in equilibrium everyone player play their best responses, denoting by an added <span class="math inline">\(*\)</span> the equilibrium quanatities (outcomes), plugging one to the other in (<a href="#eq:q1q2bst2">15</a>) and rearranging, we get: <span class="math display">\[q_1^* = \frac{a-4c_1+2c_2+c_3}{3} ~~~~~ q_2^* = \frac{a+2c_1-4c_2+c_+}{3}\]</span> And plugging this back to (<a href="#eq:q3bst1">14</a>), we get: <span class="math display">\[q_3^* = \frac{a+2c_1+2c_2-5c_3}{6}\]</span> Using these, total output, market price and company payoffs are: <span class="math display">\[Q^* = \frac{5 a-2 c_1-2 c_2-c_3}{6} ~~~~ P^* = \frac{a+2 c_1+2 c_2+c_3}{6}\]</span> <span class="math display">\[\begin{aligned}
+    \pi_1^* &amp;= \frac{1}{18}(a-4 c_1+2 c_2+c_3)^2 \\
+    \pi_2^* &amp;= \frac{1}{18}(a-4 c_1+2 c_2+c_3)^2 \\
+    \pi_3^* &amp;= \frac16 (a+2 c_1+2 c_2-5 c_3) \left( \frac16 (a+2 c_1+2 c_2+c_3) -c_3 \right)\end{aligned}\]</span> Since the total welfare is the sum of the consumer surplus (<span class="math inline">\((Q^*)^2/2\)</span>) and the 3 profits (assuming <span class="math inline">\(c_1=c_2=c_3=c\)</span>): <span class="math display">\[TW_b = \frac{(Q^*)^2}{2} + \sum\limits_{i=3}^3 \pi^*_i = \frac{25}{72}(a-c)^2+\frac{1}{18}(a-c)^2+\frac{1}{18}(a-c)^2+\frac{1}{36}(a-c)^2=  \frac{35}{72} (a-c)^2\]</span></p>
+<h4 id="c-1" class="unnumbered">c)</h4>
+<p>As the structure of the game requires again, first start to analyze the subgame at the end of the game, thus with the decision of company 3 given company 1’s and 2’s decisions. As shown in (<a href="#eq:co3profitb">13</a>) and (<a href="#eq:q3bst1">14</a>), the best response equilibrium strategy of company 3 in the subgame, is: <a name="eq:q3cst1"></a><span class="math display">\[
+    q_3(q_1,q_2) = \frac{a-c_3-q_1-q_2}{2}\qquad (16)\]</span> This is the strategy of company 2 in the equilibrium of this subgame. The next subgame in the ’generalized backward induction’ procedure, is the second stage where company 2’s decision occurs. Again, since companies are rational and this is common knowledge to everyone, company 2 can rationally assume that company 3 will behave according to (<a href="#eq:q3cst1">16</a>), thus: <span class="math display">\[\pi_2 = \left[a-\left(q_1+q_2+\frac{a-c_3-q_1-q_2}{2}\right)\right]q_2-c_2q_2 ~~ \Rightarrow ~~ \frac{\partial \pi_2}{\partial q_2} = 0\]</span> <a name="eq:q2cst2"></a><span class="math display">\[
+    q_2(q_1) = \frac{a-2 c_2+c_3-q_1}{2}\qquad (17)\]</span> This is the strategy of company 2 in equilibrium of the subgame, where first company 2 chooses quantity and the company 3. Lastly, we’ll get to the analysis of the whole game, given the previous sugame equilibrium strategies. Again,since companies are rational and this is common knowledge to everyone, company 1 can rationall assume that company 2 and will behave according to (<a href="#eq:q2cst2">17</a>) and (<a href="#eq:q3cst1">16</a>) respectively. Thus: <span class="math display">\[\pi_1 = \left[ a- \left( q_1+ \frac{a-2 c_2+c_3-q_1}{2}+\frac{a-c_3-q_1-\frac{a-2 c_2+c_3-q_1}{2}}{2} \right) \right]q_1-c_1q_1 ~~ \Rightarrow ~~ \frac{\partial \pi_1}{\partial q_1} = 0\]</span> <span class="math display">\[q_1^* = \frac{a-4c_1+2 c_2+c_3}{2}\]</span> Which is the strategy of company 1 in the equilibrium of the game. Using this, the produced quantities by the companies along the equilibrium strategy profile: <span class="math display">\[\begin{aligned}
+    q_2^* &amp;= \frac{a+4 c_1-6 c_2+c_3}{4} \\
+    q_3^* &amp;= \frac{a+4 c_1+2 c_2-7 c_3}{8}\end{aligned}\]</span> The total output, market price and profits of the companies are: <span class="math display">\[Q^*= \frac{7 a-4 c_1-2 c_2-c_3}{8} ~~~~ P^* = \frac{a+4 c_1+2 c_2+c_3}{8}\]</span> <span class="math display">\[\begin{aligned}
+    \pi_1^* &amp;= \frac{1}{16} (a-4 c_1+2 c_2+c_3)^2 \\
+    \pi_2^* &amp;= \frac{1}{32} (a+4 c_1-6 c_2+c_3)^2 \\
+    \pi_3^* &amp;= \frac{1}{64} (a+4 c_1+2 c_2-7 c_3)^2\end{aligned}\]</span> Again, the total welfare is the sum of the consumer surplus (<span class="math inline">\((Q^*)^2/2\)</span>) and the 3 profits (assuming <span class="math inline">\(c_1=c_2=c_3=c\)</span>): <span class="math display">\[TW_c = \frac{(Q^*)^2}{2} + \sum\limits_{i=3}^3 \pi^*_i =\frac{49}{128} (a-c)^2+\frac{1}{16} (a-c)^2+\frac{1}{32} (a-c)^2+\frac{1}{64} (a-c)^2 = \frac{63}{128} (a-c)^2\]</span></p>
+<h4 id="d" class="unnumbered">d)</h4>
+<p>As we’ve seen in the solutions, in case of game a), total welfare was (<span class="math inline">\(35/72 (a-c)^2\)</span>), in case of game b) it was (<span class="math inline">\(35/72 (a-c)^2\)</span>) and for game c), it was (<span class="math inline">\(63/128 (a-c)^2\)</span>). Taking the relations between these figures, a social welfare maximizing regulator would prefer the market structure described in point c). The outcome generated by this structure produces even higher consumer welfare than the market structure described in a) and b) (<span class="math inline">\(49/128 &gt; 35/72\)</span>).</p>
+</body>
+</div>
+</html>
