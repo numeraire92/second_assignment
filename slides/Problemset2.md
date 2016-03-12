@@ -57,6 +57,9 @@ negative, this will provide the profit maximizing quantity) and the best
 response of company $i \in {1,2,3}$ given other companies’ output are:
 $$\
     \frac{\partial \pi_i}{\partial q_i} = 80 - 2 q_i - q_{-i} = 0; ~~~\Rightarrow~~~ q_i=40-\frac{q_{-i}}{2}$$ {#eq:q123st1}
+
+----------------	
+	
 As for the 4th company, the profit, the first order condition and the
 best response function are:
 $$\pi_4 = \left[ 100 - (q_4 + q_{-4}) \right] q_4 - (20+\varphi) q_4$$
@@ -192,13 +195,16 @@ On the other hand, if $\varphi < 0$, then since in order to maximize
 profit, the all the output of the merged company should be produced by
 company 4. In this case, the market will basically have the same
 structure as describe in part b), but company 4 will get only half the
-payoff indicated above ({@pi4qb}) - again, since company 1 and 4 splits
+payoff indicated above ({@eq:pi4qb}) - again, since company 1 and 4 splits
 the profit. In this case, since $\varphi < 0$, the profit of company 4
 ($\pi_4^*>0$) will always be higher without merging than in case of
 merging ($0$).
 
 Problem 3. {#problem-3. .unnumbered}
 ====================================
+
+Problem 3
+---------
 
 Find all pure and mixed-strategy Nash equilibria of the following game!
 
@@ -258,7 +264,9 @@ Player $i = 1,2$ assigns to their pure strategy $s_i$. As
 $\Sigma \sigma_i = 1$, we can define the strategy of Player 1 as
 $(\sigma_{1T},1-\sigma_{1T}$ and Player 2 as
 $\sigma_{2L}, \sigma_{2M}, 1-\sigma_{2L}-\sigma_{2M})$. We establish the
-expected payoff for each pure strategy of Player 1 as folow.
+expected payoff for each pure strategy of Player 1 as follow.
+
+-----------------------
 
 $$\begin{aligned}
 u_1 (T, \sigma_{2L}, \sigma_{2M}) &= 2\cdot(\sigma_{2L}) + 0\cdot(\sigma_{2M}) + 1\cdot(1-\sigma_{2L}-\sigma_{2M}) \\
@@ -387,8 +395,13 @@ given. $$\begin{aligned}
     \frac{\partial \pi_2}{\partial q_2} &= a - q_1 - q_2 - 2q_3 - c_2 = 0 \\
     q_2* &= \frac{1}{2} (a - q_1 - q_3 - c_2)  \\
     \frac{\partial \pi_3}{\partial q_3} &= a - q_1 - q_2 - 2q_3 - c_3 = 0 \\
-    q_3* &= \frac{1}{2} (a- q_1 - q_2 -c_3)  \end{aligned}$$ {#eq:br4a} We solve
-the system of two-variable equations in {@eq:br4a}. $$\begin{aligned}
+    q_3* &= \frac{1}{2} (a- q_1 - q_2 -c_3)  \end{aligned}$$ {#eq:br4a}
+	
+-------------
+	
+We solve the system of two-variable equations in {@eq:br4a}.
+
+$$\begin{aligned}
     q_3* &= \frac{1}{2} (a - q_1 - (\frac{1}{2} (a - q_1 - q_3 - c_2) - c_3) \\
     &= \frac{1}{3} (a - q_1 + c_2 - 2c_3) \\
     q_2* &= \frac{1}{2} (a - q_1 - \frac{1}{3} (a - q_1 + c_2 - 2c_3) - c_2) \\
@@ -408,6 +421,8 @@ $$\begin{aligned}
     &= (a - q_1 - \frac{1}{3} (a = q_1 - 2c_2 + c_3) - \frac{1}{3} (a - q_1 + c_2 - 2c_3)) \cdot q_1 - c \cdot q_1 \\
     &= \frac{1}{3}(a - q_1 + c_2 + c_3) \cdot q_1 - c_1 q_1\end{aligned}$$
 
+----------------
+
 Again, we find the profit-maximising quantity $q_1*$ at
 $\frac{\partial \pi_i}{\partial q_i} = 0$, $$\begin{aligned}
     \frac{\partial \pi_2}{\partial q_2} &= \frac{1}{3}(a - 2q_1 + c_2 + c_3) - c_1 = 0 \\
@@ -415,13 +430,18 @@ $\frac{\partial \pi_i}{\partial q_i} = 0$, $$\begin{aligned}
 
 --------------------------
 	
-Plugging this back to ({@eq:br4a_2}). $$\begin{aligned}
+Plugging this back to ({@eq:br4a_2}):
+
+$$\begin{aligned}
     q_2* &= \frac{1}{3} (a - \frac{1}{2} (a - 3c_1 + c_2 + c_3) - 2c_2 + c_3) \\
     &= \frac{1}{6} (a + 3c_1 - 5c_2 + c_3) \\
     q_3* &= \frac{1}{3} (a -\frac{1}{2} (a - 3c_1 + c_2 + c_3) + c_2 - 2c_3) \\
-    &= \frac{1}{6} (a + 3c_1 + c_2 - 5c_3) \\\end{aligned}$$ {#eq:br4a67} From ({@eq:br4a5}),
-and ({@eq:br4a67}), we can determine the total quantity $Q = q_1 + q_2 + q_3$
-and the price $P = a - Q$. $$\begin{aligned}
+    &= \frac{1}{6} (a + 3c_1 + c_2 - 5c_3) \\\end{aligned}$$ {#eq:br4a67}
+	
+From ({@eq:br4a5}), and ({@eq:br4a67}), we can determine the total quantity $Q = q_1 + q_2 + q_3$
+and the price $P = a - Q$.
+
+$$\begin{aligned}
     Q &= \frac{1}{2} (a - 3c_1 + c_2 + c_3) + \frac{1}{6} (a + 3c_1 - 5c_2 + c_3) + \frac{1}{6} (a + 3c_1 + c_2 - 5c_3) \\
     &= \frac{1}{6} (5a - 3c_1 - c_2 - c_3) \\
     P(Q) &= a - \frac{1}{6} (5a - 3c_1 - c_2 - c_3) \\
@@ -429,8 +449,8 @@ and the price $P = a - Q$. $$\begin{aligned}
 
 ----------------------------
 	
-The profit for
-each firm at the subgame-perfect Nash equilibrium is as follows.
+The profit for each firm at the subgame-perfect Nash equilibrium is as follows.
+
 $$\begin{aligned}
     \pi_1 &= \frac{1}{6} (a + 3c_1 + c_2 + c_3) \cdot \frac{1}{2} (a - 3c_1 + c_2 + c_3) - c_1 \cdot \frac{1}{2} (a - 3c_1 + c_2 + c_3) \\
     &= \frac{1}{12}(a - 3c_1 + c_2 + c_3)^2\\
@@ -443,7 +463,8 @@ $$\begin{aligned}
 	
 The total social welfare is the sum of consumer surplus ($CS = (Q^*)^2/2$)
 and the producer profits. Thus:
-$$TW_a = \frac{(Q^*)^2}{2} + \sum\limits_{i=3}^3 \pi^*_i = \frac{25}{72} (a-c)^2+\frac{1}{12} (a-c)^2+\frac{1}{36} (a-c)^2+\frac{1}{36} (a-c)^2 = \frac{35}{72} (a-c)^2$$
+
+$$TW_a = \frac{(Q^*)^2}{2} + \sum\limits_{i=3}^3 \pi^*_i = \frac{25}{72} (a-c)^2+\frac{1}{12} (a-c)^2+\frac{1}{36} (a-c)^2+\frac{1}{36} (a-c)^2 = $$ $$ = \frac{35}{72} (a-c)^2$$
 
 Solution b) {#solution-2 .unnumbered}
 -------------------------------------
@@ -454,10 +475,11 @@ company 3 chooses its own, we first start to analyze the subgame at the
 end of the: the choice of company 3. Assuming $q_1$ and $q_2$ to be the
 chosen quantities of the leading companies, the best response of company
 3 is (given that all companies are rational and that rationality of
-companies are common knowledge): $$
-    \pi_3 = [a - (q_3 + q_{-3})] q_3 - c_3 q_3 ~~ \Rightarrow ~~ \frac{\partial \pi_3}{\partial q_3} = a-2q_3-q_{-3}-c_3=0$$ {#eq:co3profitb}
-$$
-    q_3(q_1,q_2) = \frac{a-c_3-q_1-q_2}{2}$$ {#eq:q3bst1}
+companies are common knowledge):
+
+$$  \pi_3 = [a - (q_3 + q_{-3})] q_3 - c_3 q_3 ~~ \Rightarrow ~~ \frac{\partial \pi_3}{\partial q_3} = a-2q_3-q_{-3}-c_3=0$$ {#eq:co3profitb}
+
+$$  q_3(q_1,q_2) = \frac{a-c_3-q_1-q_2}{2}$$ {#eq:q3bst1}
 	
 ------------------------
 	
@@ -466,20 +488,25 @@ all companies are rational and that is common knowledge, although
 company 1 and 2 has no information about previous moves, they can assume
 rationally that company 3 will have according to ({@eq:q3bst1}). Thus
 their best response functions ($i \in {1,2}$):
+
 $$\pi_i = [a-(q_1+q_2+\frac{a-c_3-q_1-q_2}{2})]*q_i-c_i*q_i ~~ \Rightarrow ~~ \frac{\partial \pi_i}{\partial q_i} = 0$$
-$$
-    q_1(q_2) = \frac{a-2c_1+c_3-q_2}{2} ~~~~ q_2(q_1) = \frac{a-2c_2+c_3-q_1}{2}$$ {#eq:q1q2bst2}
+
+$$ q_1(q_2) = \frac{a-2c_1+c_3-q_2}{2} ~~~~ q_2(q_1) = \frac{a-2c_2+c_3-q_1}{2}$$ {#eq:q1q2bst2}
 
 -------------------------
 	
 Since in equilibrium everyone player play their best responses, denoting
 by an added $*$ the equilibrium quanatities (outcomes), plugging one to
 the other in ({@eq:q1q2bst2}) and rearranging, we get:
+
 $$q_1^* = \frac{a-4c_1+2c_2+c_3}{3} ~~~~~ q_2^* = \frac{a+2c_1-4c_2+c_+}{3}$$
+
 And plugging this back to ({@eq:q3bst1}), we get:
+
 $$q_3^* = \frac{a+2c_1+2c_2-5c_3}{6}$$
-Using these, total output, market
-price and company payoffs are:
+
+Using these, total output, market price and company payoffs are:
+
 $$Q^* = \frac{5 a-2 c_1-2 c_2-c_3}{6} ~~~~ P^* = \frac{a+2 c_1+2 c_2+c_3}{6}$$
 
 ---------------------
@@ -488,9 +515,13 @@ $$\begin{aligned}
     \pi_1^* &= \frac{1}{18}(a-4 c_1+2 c_2+c_3)^2 \\
     \pi_2^* &= \frac{1}{18}(a-4 c_1+2 c_2+c_3)^2 \\
     \pi_3^* &= \frac16 (a+2 c_1+2 c_2-5 c_3) \left( \frac16 (a+2 c_1+2 c_2+c_3) -c_3 \right)\end{aligned}$$
+	
 Since the total welfare is the sum of the consumer surplus ($(Q^*)^2/2$)
 and the 3 profits (assuming $c_1=c_2=c_3=c$):
-$$TW_b = \frac{(Q^*)^2}{2} + \sum\limits_{i=3}^3 \pi^*_i = \frac{25}{72}(a-c)^2+\frac{1}{18}(a-c)^2+\frac{1}{18}(a-c)^2+\frac{1}{36}(a-c)^2=  \frac{35}{72} (a-c)^2$$
+
+$$TW_b = \frac{(Q^*)^2}{2} + \sum\limits_{i=3}^3 \pi^*_i = \frac{25}{72}(a-c)^2+\frac{1}{18}(a-c)^2+\frac{1}{18}(a-c)^2+\frac{1}{36}(a-c)^2=$$
+
+$$ =  \frac{35}{72} (a-c)^2$$
 
 Solution c) {#solution-2 .unnumbered}
 -------------------------------------
@@ -499,8 +530,9 @@ As the structure of the game requires again, first start to analyze the
 subgame at the end of the game, thus with the decision of company 3
 given company 1’s and 2’s decisions. As shown in ({@eq:co3profitb}) and
 ({@eq:q3bst1}), the best response equilibrium strategy of company 3 in the
-subgame, is: $$
-    q_3(q_1,q_2) = \frac{a-c_3-q_1-q_2}{2}$$ {#eq:q3cst1}
+subgame, is:
+
+$$  q_3(q_1,q_2) = \frac{a-c_3-q_1-q_2}{2}$$ {#eq:q3cst1}
 	
 ---------------------------
 
@@ -511,7 +543,8 @@ and this is common knowledge to everyone, company 2 can rationally assume that
 company 3 will behave according to ({@eq:q3cst1}), thus: 
 
 
-$$\pi_2 = \left[a-\left(q_1+q_2+\frac{a-c_3-q_1-q_2}{2}\right)\right]q_2-c_2q_2 ~~ \Rightarrow ~~ \frac{\partial \pi_2}{\partial q_2} = 0$$
+$$\pi_2 = \left[a-\left(q_1+q_2+\frac{a-c_3-q_1-q_2}{2}\right)\right]q_2-c_2q_2$$
+$$ \Rightarrow ~~ \frac{\partial \pi_2}{\partial q_2} = 0$$
 
 $$  q_2(q_1) = \frac{a-2 c_2+c_3-q_1}{2}$$ {#eq:q2cst2}
 
@@ -525,7 +558,8 @@ company 1 can rationall assume that company 2 and will behave according to
 ({@eq:q2cst2}) and ({@eq:q3cst1}) respectively. Thus: 
 
 
-$$\pi_1 = \left[ a- \left( q_1+ \frac{a-2 c_2+c_3-q_1}{2}+\frac{a-c_3-q_1-\frac{a-2 c_2+c_3-q_1}{2}}{2} \right) \right]q_1-c_1q_1 ~~ \Rightarrow ~~ \frac{\partial \pi_1}{\partial q_1} = 0$$
+$$\pi_1 = \left[ a- \left( q_1+ \frac{a-2 c_2+c_3-q_1}{2}+\frac{a-c_3-q_1-\frac{a-2 c_2+c_3-q_1}{2}}{2} \right) \right]q_1-c_1q_1 $$
+$$ \Rightarrow ~~ \frac{\partial \pi_1}{\partial q_1} = 0$$
 $$q_1^* = \frac{a-4c_1+2 c_2+c_3}{2}$$
 
 --------------
@@ -547,7 +581,8 @@ $$\begin{aligned}
     \pi_3^* &= \frac{1}{64} (a+4 c_1+2 c_2-7 c_3)^2\end{aligned}$$
 Again, the total welfare is the sum of the consumer surplus
 ($(Q^*)^2/2$) and the 3 profits (assuming $c_1=c_2=c_3=c$):
-$$TW_c = \frac{(Q^*)^2}{2} + \sum\limits_{i=3}^3 \pi^*_i =\frac{49}{128} (a-c)^2+\frac{1}{16} (a-c)^2+\frac{1}{32} (a-c)^2+\frac{1}{64} (a-c)^2 = \frac{63}{128} (a-c)^2$$
+$$TW_c = \frac{(Q^*)^2}{2} + \sum\limits_{i=3}^3 \pi^*_i =\frac{49}{128} (a-c)^2+\frac{1}{16} (a-c)^2+\frac{1}{32} (a-c)^2+\frac{1}{64} (a-c)^2 = $$
+$$ = \frac{63}{128} (a-c)^2$$
 
 Solution d) {#solution-2 .unnumbered}
 -------------------------------------
