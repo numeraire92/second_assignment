@@ -5,71 +5,73 @@
 Problem 1. {#problem-1. .unnumbered}
 ====================================
 
-Consider a market consisting of four rms, each of which produces the same 
+------------
+
+Consider a market consisting of four firms, each of which produces the same 
 product. The inverse market demand for this product is $P = 100 - Q$; where $P$ 
-is price and $Q$ is aggregate output. The production costs for firms 1, 2, and 
-3 are identical and given by $C(q_i) = 20q_i (i = 1; 2; 3)$, where $q_i$ is the 
-output of firm $i$: This means that for each of these firms, variable costs 
-are constant at 20 per unit. The production costs for firm 4 are $C(q_4) = (20 
+is price and $Q$ is aggregate output. The production costs for firms 1, 2, and 
+3 are identical and given by $C(q_i) = 20q_i (i = 1; 2; 3)$. where $q_i$ is the 
+output of firm $i$: This means that for each of these firms, variable costs 
+are constant at 20 per unit. The production costs for firm 4 are $C(q_4) = (20 
 + \varphi )q_4$; where $\varphi> -20$ is some constant. Note that if $\varphi > 
-0$; then firm 4 is a high-cost firm, while if $\varphi < 0$; firm 4 is a 
-low-cost firm. Note also that $Q = q_1 + q_2 + q_3 + q_4$: Assume that the 
-firms each choose their outputs to maximise profits given that they each act 
+0$; then firm 4 is a high-cost firm, while if $\varphi < 0$; firm 4 is a 
+low-cost firm. Note also that $Q = q_1 + q_2 + q_3 + q_4$: Assume that the 
+firms each choose their outputs to maximise profits given that they each act 
 as Cournot competitors. 
 
 Questions
 --------
 
-a) Compute the individual output and the profit for each firm as well as the 
-product price in the Nash equilibrium. For this to be a true equilibrium in 
-which all four firms are active, all of the firms must at least be covering 
+a) Compute the individual output and the profit for each firm as well as the 
+product price in the Nash equilibrium. For this to be a true equilibrium in 
+which all four firms are active, all of the firms must at least be covering 
 their variable costs. Identify the constraints that $\varphi$ must satisfy for 
 this to be the case.
 
 Questions
 --------
 
-b) Assume now that rms 1 and 2 merge (so that firms 1 and 2 maximize their 
-joint profits) and that all firms (including the merged entity) continue to 
-act as Cournot competitors after the merger. Is this merger profitable? (Hint: 
-Compare the joint pre-merger profits of firms 1 and 2 with their profit as 
+b) Assume now that firms 1 and 2 merge (so that firms 1 and 2 maximize their 
+joint profits) and that all firms (including the merged entity) continue to 
+act as Cournot competitors after the merger. Is this merger profitable? (Hint: 
+Compare the joint pre-merger profits of firms 1 and 2 with their profit as 
 a merged entity after the merger.) Clearly show the reasoning and the 
 computations that lead to your answer to this question. 
 
 Questions
 --------
-
-c) Now assume that firms 1 and 4 merge. Can this merger be profitable if 
-$\varphi$ is positive so that firm 4 is a high-cost firm? What are the 
-conditions on $\varphi$ so that the profits of firm 2 rise as a result of 
+varphi
+c) Now assume that firms 1 and 4 merge. Can this merger be profitable if 
+$\varphi$ is positive so that firm 4 is a high-cost firm? What are the 
+conditions on $\varphi$ so that the profits of firm 2 rise as a result of 
 this merger? 
 
 Solution a){#solution .unnumbered}
 ----------------------------------
 
-Let $\pi_i$ denote the profit (payoff) of company $i$ given its produced
+Let $\pi_i$ denote the profit (pay-off) of company $i$ given its produced
 quantity ($q_i$) and the total quantity produced by the rest of the
 companies $q_{-i}$. Using these notations, the profit of company
 $i \in {1, 2, 3}$:
 $$\pi_i = \left[ 100 - (q_i + q_{-i}) \right] q_i - 20 q_i$$ The first
 order condition (since the coefficient of the quadratic term is
 negative, this will provide the profit maximizing quantity) and the best
-response of company $i \in {1,2,3}$ given other companies’ output are:
+response of company $i \in {1,2,3}$ given other companies' output are:
 $$\
     \frac{\partial \pi_i}{\partial q_i} = 80 - 2 q_i - q_{-i} = 0; ~~~\Rightarrow~~~ q_i=40-\frac{q_{-i}}{2}$$ {#eq:q123st1}
 
-----------------	
-	
+----------------
+
 As for the 4th company, the profit, the first order condition and the
 best response function are:
 $$\pi_4 = \left[ 100 - (q_4 + q_{-4}) \right] q_4 - (20+\varphi) q_4$$
 $$ 
     \frac{\partial \pi_4}{\partial q_4} = 80 - 2 q_4 - q_{-4}-\varphi = 0; ~~~\Rightarrow~~~ q_4=40-\frac{q_{-4}+\varphi}{2}$$ {#eq:q4st1}
-	
------------	
+
+-----------
 
 In Nash-equilibrium every company produces the best response quantity
-given the other companies’ output, thus denoting with
+given the other companies' output, thus denoting with
 $q_1^*$,$q_2^*$,$q_3^*$ and $q_4^*$ the produced quantities in
 equilibrium by a given company, substituting company 1’s best response
 to company 2’s best response in equilibrium and then rearranging the
@@ -78,7 +80,7 @@ $$  q_2^* = 40 - \frac{\left( 40 - \frac{q_2^*+q_3^*+q_4^*}{2} \right)+q_3^*+q_4
 
 ------------------------
 
-Plugging this into company 1’s best response in equlibrium, we’ll get:
+Plugging this into company 1’s best response in equilibrium, we’ll get:
 $$
     q_1^* = 40 - \frac{\left( \frac{80-q_3^*-q_4^*}{3} \right)+q_3^*+q_4^*}{2} ~~~\Rightarrow~~~ q_1^*=\frac{80-q_3^*-q_4^*}{3}$$ {#eq:q1st2}
 Substituting these two formulas in the best reponse of company 3 in
@@ -87,12 +89,12 @@ equilibrium and rearranging the equation, we get: $$
 Again, plugging this back to ({@eq:q2st2}) and ({@eq:q1st2}), we get:
 $$  q_2^* = q_1^*=20-\frac{q_4^*}{4}$$ {#eq:q12st3}
 And finally, substituting all
-these in company 4’s best response in equlibrium, we get:
+these in company 4’s best response in equilibrium, we get:
 $$\widehat{q_4^*}=40-\frac{3 \cdot \left( 20-\frac{q_4^*}{2} \right)+\varphi}{2} ~~~\Rightarrow~~~ \widehat{q_4^*} = 16-\frac{4}{5} \varphi$$
 
 --------------------------------------
 
-Thus in equlibrium: $$q_4^* =
+Thus in equilibrium: $$q_4^* =
     \begin{cases}
         16-\frac45 \varphi & \text{if} ~ \varphi \leq 20 \\
         0 & \text{if} ~ \varphi > 20
@@ -470,8 +472,8 @@ Solution b) {#solution-2 .unnumbered}
 -------------------------------------
 
 Since in the initial stage of the game company 1 and 2 choose quantity
-simulteanously and in the next stage in knowledge of those choice
-company 3 chooses its own, we first start to analyze the subgame at the
+simultaneously and in the next stage in knowledge of those choice
+company 3 chooses its own, we first start to analyse the subgame at the
 end of the: the choice of company 3. Assuming $q_1$ and $q_2$ to be the
 chosen quantities of the leading companies, the best response of company
 3 is (given that all companies are rational and that rationality of
@@ -496,7 +498,7 @@ $$ q_1(q_2) = \frac{a-2c_1+c_3-q_2}{2} ~~~~ q_2(q_1) = \frac{a-2c_2+c_3-q_1}{2}$
 -------------------------
 	
 Since in equilibrium everyone player play their best responses, denoting
-by an added $*$ the equilibrium quanatities (outcomes), plugging one to
+by an added $*$ the equilibrium quantities (outcomes), plugging one to
 the other in ({@eq:q1q2bst2}) and rearranging, we get:
 
 $$q_1^* = \frac{a-4c_1+2c_2+c_3}{3} ~~~~~ q_2^* = \frac{a+2c_1-4c_2+c_+}{3}$$
@@ -526,7 +528,7 @@ $$ =  \frac{35}{72} (a-c)^2$$
 Solution c) {#solution-2 .unnumbered}
 -------------------------------------
 
-As the structure of the game requires again, first start to analyze the
+As the structure of the game requires again, first start to analyse the
 subgame at the end of the game, thus with the decision of company 3
 given company 1’s and 2’s decisions. As shown in ({@eq:co3profitb}) and
 ({@eq:q3bst1}), the best response equilibrium strategy of company 3 in the
@@ -554,7 +556,7 @@ This is the strategy of company 2 in equilibrium of the subgame, where first
 company 2 chooses quantity and the company 3. Lastly, we’ll get to the 
 analysis of the whole game, given the previous sugame equilibrium strategies. 
 Again,since companies are rational and this is common knowledge to everyone, 
-company 1 can rationall assume that company 2 and will behave according to 
+company 1 can rational assume that company 2 and will behave according to 
 ({@eq:q2cst2}) and ({@eq:q3cst1}) respectively. Thus: 
 
 
@@ -593,6 +595,3 @@ As we’ve seen in the solutions, in case of game a), total welfare was ($35/72
 maximizing regulator would prefer the market structure described in point c). 
 The outcome generated by this structure produces even higher consumer welfare 
 than the market structure described in a) and b) ($49/128 > 35/72$). 
-
-
-
